@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\Admin\TableController;
 use App\Http\Controllers\Admin\ExpensesController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\SettingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,6 +60,8 @@ Route::group(
             Route::post('close-shift', [ShiftController::class, 'closeShift'])->name('close-shift');
             Route::post('edit_start_time/{id}', [OrderController::class, 'editStartTime'])->name('edit_start_time');
             Route::get('product-reports', [ProductController::class, 'productReports'])->name('product-reports');
+            Route::get('/settings', [SettingController::class, 'index'])->name('settings');
+            Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
     }
 );
     // Route::get('/', function(){
