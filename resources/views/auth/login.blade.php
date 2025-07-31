@@ -15,15 +15,9 @@ input[type=button], button {
 
 
 <div class="flex justify-center">
-                    <img src="{{ asset('assets\admin\images\logo.png')}}" width="100px">
                     
                 </div>
-                <center>
-                    <p style="font-size:30px;color: brown;">منصة حساباتي</p>
-                    <p style="color: white;">متابعة الحسابات</p>
-                    <br>
-                    
-                </center>
+                
 
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
@@ -32,22 +26,17 @@ input[type=button], button {
         @csrf
 
         <!-- Email Address -->
-        <div>
-        <label for="password" style="float:right;"> البريد الالكتروني</label>
-            <x-text-input id="email" style="text-align:right;" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            <x-input-error :messages="$errors->get('email')"  class="mt-2" />
+        <div class="form-group">
+            <label for="email" class="form-label">البريد الالكتروني</label>
+            <input id="email" class="form-input" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
+            <x-input-error :messages="$errors->get('email')" class="error-message" />
         </div>
 
         <!-- Password -->
-        <div class="mt-4">
-           <label for="password" style="float:right;">كلمة المرور</label>
-
-            <x-text-input id="password" class="block mt-1 w-full" style="text-align:right;"
-                            type="password"
-                            name="password"
-                            required autocomplete="current-password" />
-
-            <x-input-error :messages="$errors->get('password')" class="mt-2" />
+        <div class="form-group">
+            <label for="password" class="form-label">كلمة المرور</label>
+            <input id="password" class="form-input" type="password" name="password" required autocomplete="current-password" />
+            <x-input-error :messages="$errors->get('password')" class="error-message" />
         </div>
 
         <!-- Remember Me -->
@@ -65,9 +54,9 @@ input[type=button], button {
                 </a>-->
             @endif
 
-            <x-primary-button class="ml-3" style="background-color: #1a95bb;">
+            <button type="submit" class="login-btn">
                 تسجيل الدخول
-            </x-primary-button>
+            </button>
         </div>
     </form>
 
