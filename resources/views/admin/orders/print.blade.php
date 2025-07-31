@@ -143,7 +143,8 @@
                 <br>
                 <span><i class="fa fa-instagram" aria-hidden="true"></i> alejandro.eg25</span>
                 <p style="text-align: center; font-size: 10px; margin-top: 10px;">
-                    شكراً لاختياركم <strong>Alejandro</strong> 🍽️ نحب نسمع رأيكم ❤️
+                    <!-- شكراً لاختياركم <strong>Alejandro</strong> 🍽️ نحب نسمع رأيكم ❤️ -->
+                    {{ $order_msg}}
                 </p>
                 <br><br>
 

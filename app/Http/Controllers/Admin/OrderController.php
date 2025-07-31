@@ -16,6 +16,7 @@ use Carbon\Carbon;
 use DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
+use App\Models\Setting;
 
 class OrderController extends Controller
 {
@@ -83,8 +84,9 @@ public function create()
             return $this->printTableCaptinOrderNewItems($orderId);
         }
     }
+    $whats_msg = Setting::where('key', 'whatsapp_order_message')->first()->value;
 
-    return view('admin.orders.create', compact('products', 'clients', 'tabels', 'rooms', 'services', 'active_tables', 'active_rooms', 'order_number'));
+    return view('admin.orders.create', compact('products', 'clients', 'tabels', 'rooms', 'services', 'active_tables', 'active_rooms', 'order_number', 'whats_msg'));
 }
 
 
@@ -472,7 +474,8 @@ private function calculateTotalPrice($product_ids, $quantities)
     {
         $order = Order::with('orderItems')->findOrFail($id);
         $order->update(['status' => 2]);
-        return view('admin.orders.print', compact('order'));
+        $order_msg = Setting::where('key', 'order_message')->first()->value;
+        return view('admin.orders.print', compact('order', 'order_msg'));
     }
     public function printTableReceipt($id)
     {
