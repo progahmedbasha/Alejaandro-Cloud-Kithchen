@@ -481,7 +481,8 @@ private function calculateTotalPrice($product_ids, $quantities)
     {
         $order = Order::with('orderItems')->findOrFail($id);
         $order->update(['is_printed' => 1]);
-        return view('admin.orders.print', compact('order'));
+        $order_msg = Setting::where('key', 'order_message')->first()->value;
+        return view('admin.orders.print', compact('order', 'order_msg'));
     }
     public function printTableCaptinOrder($id)
     {

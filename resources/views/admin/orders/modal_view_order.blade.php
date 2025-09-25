@@ -62,7 +62,7 @@
                 {{-- <hr> --}}
                 <br>
                 @if ($active_table->orderItems->count() > 0)
-                اجمالي المشروبات :
+                اجمالي الأوردر :
                 {{ $active_table->orderItems->sum('total_cost') }} ج
                 @endif
                 <hr>
@@ -135,7 +135,7 @@
         $message .= "📍 *الخدمة:* " . $active_table->service->name . "\n";
         $message .= "--------------------------\n";
 
-        // تفاصيل الطلبات (المشروبات)
+        // تفاصيل الطلبات (الأوردر)
         if ($active_table->orderItems->count() > 0) {
             foreach ($active_table->orderItems as $item) {
                 $product = $item->product->name ?? '---';
@@ -145,7 +145,7 @@
             }
             $message .= "--------------------------\n";
             $drinksTotal = $active_table->orderItems->sum('total_cost');
-            $message .= "🥤 *إجمالي المشروبات:* $drinksTotal ج\n";
+            $message .= "🥤 *إجمالي الأوردر:* $drinksTotal ج\n";
         }
 
         // وقت الوقت

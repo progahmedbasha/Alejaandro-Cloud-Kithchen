@@ -49,8 +49,8 @@
         {{--<div class="page">--}}
         <center>
             <div id="elem" style="text-align:center;width:250px;height:auto;font-size:12px;">
-                <span style="font-size:68px;"><b>Rokna</b></span><br>
-                <span style="font-size:22px;">Cafe & Playstaion</span><br>
+                <span style="font-size:68px;"><b>Alejandro</b></span><br>
+                <span style="font-size:22px;">Restaurant</span><br>
                 <br><br><br>
                 <table class="detail" width="100%">
                     <tr>
