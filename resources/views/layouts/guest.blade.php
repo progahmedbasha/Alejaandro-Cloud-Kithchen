@@ -129,7 +129,7 @@
         <div class="login-container">
             <div class="login-card">
                 <div class="logo-container">
-                    <img src="https://scontent-hbe1-1.xx.fbcdn.net/v/t39.30808-6/480265668_122114736596739039_5314495852094660941_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=1LR--JHWakAQ7kNvwEuL6Ke&_nc_oc=AdmvL7Ivi4f2llduTy0wYP3d8CmPYmoonAspBEmaJuLwwf56Zd00IIVAHN_G3AZyx_g&_nc_zt=23&_nc_ht=scontent-hbe1-1.xx&_nc_gid=V1ahtzQ1j4YPmbrgLDjXvQ&oh=00_AfTMxotLpoKlYtoUq6wXlxciwgUtfNAK-uSQfqU2SLeILA&oe=6891D1EF" alt="Logo">
+                    <img src="{{ url('assets/admin/images/profile.jpg') }}" alt="Logo">
                 </div>
                 
                 <h1 class="title">منصة حساباتي</h1>

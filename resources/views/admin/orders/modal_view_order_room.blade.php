@@ -61,7 +61,7 @@
                 </div>
                 <br>
                 @if ($active_room->orderItems->count() > 0)
-                اجمالي المشروبات : 
+                اجمالي الأوردر : 
                 {{ $active_room->orderItems->sum('total_cost') }} ج
                 @endif
                 <hr>
